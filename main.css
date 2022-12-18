@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(45deg, #000000, #FFEAA7);
+    background: linear-gradient(45deg, #000000, #e9e8e3);
   }
 
   /* The side navigation menu */
@@ -23,7 +23,7 @@ body {
   
   /* Active/current link */
   .sidebar a.active {
-    background-color: #FFEAA7;
+    background-color: #6d6b60;
     color: white;
   }
   
