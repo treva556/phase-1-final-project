@@ -1,0 +1,22 @@
+{
+  "name": "phase-1-final-project",
+  "version": "1.0.0",
+  "description": "final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/treva556/phase-1-final-project.git"
+  },
+  "keywords": [
+    "code"
+  ],
+  "author": "mark trevor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/treva556/phase-1-final-project/issues"
+  },
+  "homepage": "https://github.com/treva556/phase-1-final-project#readme"
+}
