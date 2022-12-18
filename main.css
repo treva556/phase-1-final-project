@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(45deg, #000000, #e9e8e3);
+    background: linear-gradient(white);
   }
 
   /* The side navigation menu */
@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #000000;
+    background-color: #ffffff;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -16,7 +16,7 @@ body {
   /* Sidebar links */
   .sidebar a {
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 16px;
     text-decoration: none;
   }
