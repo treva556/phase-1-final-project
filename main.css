@@ -1,7 +1,10 @@
 
-
+body{
+  
+}
 p {
-  background-image: url('/svgs/hotel.svg');
+  text-align: center;
+  font-size: large;
 }
 
 
@@ -10,6 +13,7 @@ p {
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  align-self: center;
 }
 
 
@@ -28,3 +32,60 @@ flex-wrap: wrap;
   /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/
   width: calc( 100% / 5 - 10px);
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  text-align: center;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+h2{
+  text-align: center;
+  font-size: 18px;
+}
+body { 
+  margin: 0; 
+  display: grid;
+  height: 100%;
+  grid-template-areas:
+        "header_section"
+        "Site-content_section"
+        "footer_section";
+  grid-template-rows: 100px 100% 50px; /* 100px for header, 100% for content section, 50px for footer */
+}
+
