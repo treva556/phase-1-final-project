@@ -10,14 +10,18 @@
 </head>
 <body>
 
+
  <!-- header--> 
  <header class ="header" id ="header">                                                                  
   <div class = "head-top">
     <div class = "logo">
-      <img src="svgs/logo.svg" height="50px" width="50px" alt="">
+      <img src="svgs/logo.svg" height="78px" width="80px" alt="">  
     </div>
-    <div class = "site-name">
-      <span>MARK TREVOR HOTEL</span>
+   
+        <div class = "site-name">
+          <span>MARK TREVOR HOTEL</span>
+       
+      </div>
     </div>
     <div class = "site-nav">
       <span id="nav-btn">MENU<i class = "fas fa-bars"></i></span>
@@ -45,6 +49,41 @@
    <li><a href="#services">services</a></li>
    <li><a href="#reviews">reviews</a></li>
   </ul>
+
+  
+  <div class="card">
+    <div class="container">
+       <div class="Book">
+        <form class="Book-form">
+          <div class="form-item">
+            <label- for ="checkin-date">Check in:</label->
+            <input type="date" id="checkin-date">
+          </div>
+          <div class="form-item">
+            <label for = "checkout-date">Check out:</label>
+            <input type="date" id = "checkout-date">
+          </div>
+          <div class="form-item">
+            <label for="adult">Adults</label>
+            <input type="number" min ="1" value="0" id="Adults">
+          </div>
+          <div class="form-item">
+            <label for="children">Children: </label>
+            <input type="number" min = "0" value="0" id="Children">
+          </div>
+          <div class="form-item">
+            <label for="rooms">Rooms:</label>
+            <input type="number" min = "1" value="1" id="Rooms">
+          </div>
+          <div class="form-item">
+            <input type="submit" class="btn" value="Book">
+          </div>
+
+        </form>
+       
+       </div>
+    </div>
+  </div>
 
 </div>
 <div id="modal"></div>
@@ -105,6 +144,10 @@
       </article>
     </div> 
 </section>
+<div class="form-item">
+  <label for="Rate Us">Rate Us: </label>
+  <input type="number" min = "0" max = "5" value="0" id="Rate-us">
+</div>
 
 
 
