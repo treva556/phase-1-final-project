@@ -1,8 +1,4 @@
 
-
-
-  
-
 body{
   background-color:  #04619F;
   text-align: center;
@@ -17,10 +13,8 @@ header{
   margin-top: 2px;
   padding: 0;
 }
-
-
-  p {
-    font-size: 1.40em; /* 14px/16=0.875em */
+p {
+    font-size: 1.40em;
   }
 
 .Book{
