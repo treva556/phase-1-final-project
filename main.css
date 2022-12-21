@@ -1,18 +1,35 @@
 
 
 
-#scrollUp {
-bottom: 100px;
-
   
-}
+
 body{
-  background-color: linear-gradient(45,20% black,60% #04619F);
+  background-color:  #04619F;
   text-align: center;
 
   
 }
 header{
   text-align: center;
+  margin-bottom: auto;
 }
+*{
+  margin-top: 2px;
+  padding: 0;
+}
+
+
+  p {
+    font-size: 1.40em; /* 14px/16=0.875em */
+  }
+
+.Book{
+  margin-bottom: 22px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+.angled-gradient {
+  background: linear-gradient(70deg, blue, pink);
+}
+
 
