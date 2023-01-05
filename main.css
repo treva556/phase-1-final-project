@@ -1,10 +1,12 @@
 
 body{
-  background-color:  #04619F;
+  margin: 0;
+  font-family: 'prompt' sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: #617b9d;
   text-align: center;
-
-  
 }
+
 header{
   text-align: center;
   margin-bottom: auto;
@@ -17,13 +19,8 @@ p {
     font-size: 1.40em;
   }
 
-.Book{
-  margin-bottom: 22px;
-  margin-top: 30px;
-  margin-left: 5px;
-}
-.angled-gradient {
-  background: linear-gradient(70deg, blue, pink);
-}
+
+
+
 
 
