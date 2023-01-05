@@ -2,21 +2,8 @@
     "rooms": [
         {
             "roomId": "1",
-            "roomSize": "",
-            "checkInn": "2018-09-29",
-            "checkOut": "2018-09-30",
-            "numAdult": "1",
             "roomAmount":"15"
-           
-        },
-        {
-            "roomId": "2",
-            "masterId": "0",
-            "firstNight": "2018-09-30",
-            "lastNight": "2018-09-30",
-            "numAdult": "2",
-            "numChild":"1"
-           
         }
+ 
     ]
 }

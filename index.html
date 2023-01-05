@@ -26,25 +26,21 @@
    
   </div>
 
- 
-
-  
- 
        <div class="Book">
         <form class="Book-form">
-          <div class="form-item">
+          <div class="form-itemCi">
             <label- for ="checkin-date">Check in:</label->
             <input type="date" id="checkin-date">
           </div>
-          <div class="form-item">
+          <div class="form-itemCo">
             <label for = "checkout-date">Check out:</label>
             <input type="date" id = "checkout-date">
           </div>
-          <div class="form-item">
+          <div class="form-itemAdult">
             <label for="adult">Adults</label>
-            <input type="number" min ="1" value="0" id="Adults">
+            <input type="number" min ="1" value="1" id="Adults">
           </div>
-          <div class="form-item">
+          <div class="form-itemChild">
             <label for="children">Children: </label>
             <input type="number" min = "0" value="0" id="Children">
           </div>
@@ -53,13 +49,13 @@
             <input type="number" min = "1" value="1" id="Rooms">
           </div>
           <div class="form-item">
-            <input type="submit" class="Book" value="Book">
+            <button id="book">Book</button>
           </div>
           <div class="form-item">
-            <input type="submit" class="cancel" value="cancel">
+            <button id="cancel">Cancel</button>
           </div>
           <div class="form-item">
-            <input type="submit" class="check-out" value="check-out">
+            <button id="Check-out">Check out</button>
           </div>
 
         </form>
@@ -120,12 +116,6 @@
   <input type="radio" id="star1" name="rate" value="1" />
   <label for="star1" title="text">1 star</label>
 </div>
-
-.container
-  -15.times do
-    .bars
-
-
 
 <script src="js/index.js"></script>
 </body>
