@@ -1,4 +1,6 @@
 
+document.addEventListener('DOMContentLoaded', () => {
+
 fetch('http://localhost:3000/rooms', {
   method: 'FETCH',
   body: JSON.stringify({
@@ -12,7 +14,7 @@ fetch('http://localhost:3000/rooms', {
   .then((json) => console.log(json));
 
 
-  function remainingRooms(rooms) {
+  function roomsRemaining(rooms) {
            
 
    let roomRem = document.getElementById('room-no')
@@ -73,5 +75,7 @@ function cancelRoom() {
       
       checkoutRoom();
 
+      roomsRemaining()
+})
 
    
