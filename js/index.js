@@ -1,6 +1,6 @@
 
 fetch('http://localhost:3000/rooms', {
-  method: 'PATCH',
+  method: 'FETCH',
   body: JSON.stringify({
     title: 'foo',
   }),
@@ -10,6 +10,19 @@ fetch('http://localhost:3000/rooms', {
 })
   .then((response) => response.json())
   .then((json) => console.log(json));
+
+
+  function remainingRooms(rooms) {
+           
+
+   let roomRem = document.getElementById('room-no')
+   // tickets available would be film.capacity string minus film.tickets_sold
+   let capacityConvert = parseInt(rooms.roomAmount, 10)
+   roomRem.textContent = capacityConvert - rooms.roomAmount
+
+
+}
+
 
 
 
@@ -59,4 +72,6 @@ function cancelRoom() {
    }
       
       checkoutRoom();
+
+
    
