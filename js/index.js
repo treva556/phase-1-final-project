@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-fetch('http://localhost:3000/rooms', {
+fetch('http://phase-1-final-project-eta.vercel.app/db.json', {
   method: 'FETCH',
   body: JSON.stringify({
     title: 'foo',
