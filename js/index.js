@@ -2,21 +2,14 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-   fetch('https://phase-1-final-project-eta.vercel.app/db.json').then((response) => {
-      return response.json();                
-    
-})
-   const headers = {'Content-Type':'application/json',
-                'Access-Control-Allow-Origin':'*',
-                'Access-Control-Allow-Methods':'PATCH'}
-const response = {
-    statusCode: 200,
-    headers:headers,
-    body: JSON.stringify({ token: params.token})
-};
-return response;
+   // fetch all available rooms
+   fetch('https://phase-1-final-project-eta.vercel.app/db.json')
+   .then(res => res.json())
+   .then(data =>{ console.log(data.rooms[0])
    
-   
+      document.getElementById('room-no').textContent = data.rooms[0].roomAmount})
+
+
    
      function roomsRemaining(rooms) {
               
@@ -29,22 +22,14 @@ return response;
    
    }
    
+   document.querySelector('#hotel-form')
+   
    
    function bookRoom() {
-   let button = document.querySelector("#book")
-   button.addEventListener("click", () => {
-      let currentListing = document.querySelector("#room-no")
-      let number = parseInt(currentListing.textContent)
-      console.log(currentListing.textContent)
-   if(number >=1){
-    currentListing.textContent = currentListing.textContent -1}
-    else {document.querySelector("#book").textContent = "No More Reservations"
-      alert("No More Reservations")}
-   }
-   )
+  
    }
    
-   bookRoom();
+  // bookRoom();
    
    function cancelRoom() {
       let button = document.querySelector("#cancel")
@@ -62,7 +47,7 @@ return response;
       )
       }
       
-      cancelRoom();
+     // cancelRoom();
    
       function checkoutRoom() {
          let button = document.querySelector("#Check-out")
@@ -79,9 +64,22 @@ return response;
          )
       }
          
-         checkoutRoom();
+        // checkoutRoom();
    
-         roomsRemaining()
+         //roomsRemaining()
 
    })
    
+   let button = document.querySelector("#book")
+   button.addEventListener("click", () => {
+      console.log('clicked')
+      // let currentListing = document.querySelector("#room-no")
+      // let number = parseInt(currentListing.textContent)
+      // console.log(currentListing.textContent)
+   // if(number >=1){
+   //  currentListing.textContent = currentListing.textContent -1}
+   //  else {document.querySelector("#book").textContent = "No More Reservations"
+   //    alert("No More Reservations")}
+   // }
+   }
+   )
