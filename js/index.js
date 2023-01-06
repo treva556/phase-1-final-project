@@ -2,17 +2,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-   fetch('http://phase-1-final-project-eta.vercel.app/db.json', {
-     method: 'FETCH',
-     body: JSON.stringify({
-       title: 'foo',
-     }),
-     headers: {
-       'Content-type': 'application/json; charset=UTF-8',
-     },
-   })
-     .then((response) => response.json())
-     .then((json) => console.log(json));
+   fetch('https://phase-1-final-project-eta.vercel.app/db.json').then((response) => {
+      return response.json();                
+    })
+ 
+   const headers = {'Content-Type':'application/json',
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Methods':'PATCH'}
+const response = {
+    statusCode: 200,
+    headers:headers,
+    body: JSON.stringify({ token: params.token})
+};
+return response;
    
    
      function roomsRemaining(rooms) {
