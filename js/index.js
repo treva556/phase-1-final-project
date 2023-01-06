@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
    fetch('https://phase-1-final-project-eta.vercel.app/db.json').then((response) => {
       return response.json();                
-    })
- 
+    
+})
    const headers = {'Content-Type':'application/json',
                 'Access-Control-Allow-Origin':'*',
                 'Access-Control-Allow-Methods':'PATCH'}
@@ -15,6 +15,7 @@ const response = {
     body: JSON.stringify({ token: params.token})
 };
 return response;
+   
    
    
      function roomsRemaining(rooms) {
@@ -29,16 +30,12 @@ return response;
    }
    
    
-   
-   
-   
-   
-   
    function bookRoom() {
    let button = document.querySelector("#book")
    button.addEventListener("click", () => {
-   
-   
+      let currentListing = document.querySelector("#room-no")
+      let number = parseInt(currentListing.textContent)
+      console.log(currentListing.textContent)
    if(number >=1){
     currentListing.textContent = currentListing.textContent -1}
     else {document.querySelector("#book").textContent = "No More Reservations"
@@ -52,6 +49,9 @@ return response;
    function cancelRoom() {
       let button = document.querySelector("#cancel")
       button.addEventListener("click", () => {
+         let currentListing = document.querySelector("#room-no")
+         let number = parseInt(currentListing.textContent)
+         console.log(currentListing.textContent)
       
       
       if(number >=1){
@@ -67,6 +67,9 @@ return response;
       function checkoutRoom() {
          let button = document.querySelector("#Check-out")
          button.addEventListener("click", () => {
+            let currentListing = document.querySelector("#room-no")
+            let number = parseInt(currentListing.textContent)
+            console.log(currentListing.textContent)
          
          
          if(number >=1){
@@ -79,4 +82,6 @@ return response;
          checkoutRoom();
    
          roomsRemaining()
+
    })
+   
