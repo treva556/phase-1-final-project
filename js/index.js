@@ -26,10 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
    
    
    function bookRoom() {
+      let button = document.querySelector("#book")
+      button.addEventListener("click", () => {
+         let currentListing = document.querySelector("#room-no")
+         let number = parseInt(currentListing.textContent)
+         console.log(currentListing.textContent)
+      
+      
+      if(number >=1){
+       currentListing.textContent = currentListing.textContent -1}
+        {document.querySelector("#book").textContent = "No More Reservations"
+         alert("Booked")}
+      }
+      )
   
    }
    
-  // bookRoom();
+bookRoom();
    
    function cancelRoom() {
       let button = document.querySelector("#cancel")
@@ -47,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       )
       }
       
-     // cancelRoom();
+      cancelRoom();
    
       function checkoutRoom() {
          let button = document.querySelector("#Check-out")
@@ -64,22 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
          )
       }
          
-        // checkoutRoom();
+        checkoutRoom();
    
-         //roomsRemaining()
+         roomsRemaining()
 
    })
    
-   let button = document.querySelector("#book")
-   button.addEventListener("click", () => {
-      console.log('clicked')
-      // let currentListing = document.querySelector("#room-no")
-      // let number = parseInt(currentListing.textContent)
-      // console.log(currentListing.textContent)
-   // if(number >=1){
-   //  currentListing.textContent = currentListing.textContent -1}
-   //  else {document.querySelector("#book").textContent = "No More Reservations"
-   //    alert("No More Reservations")}
-   // }
-   }
-   )
+ 
