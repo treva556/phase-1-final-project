@@ -14,48 +14,50 @@ document.addEventListener('DOMContentLoaded', () => {
      function roomsRemaining(rooms) {
               
    
-      let roomRem = document.getElementById('room-no')
-      // tickets available would be film.capacity string minus film.tickets_sold
-      let capacityConvert = parseInt(rooms.roomAmount, 10)
+     let roomRem = document.getElementById('room-no')
+     //tickets available would be film.capacity string minus film.tickets_sold
+     let capacityConvert = parseInt(rooms.roomAmount, 10)
       roomRem.textContent = capacityConvert - rooms.roomAmount
    
    
-   }
+}
    
-   document.querySelector('#hotel-form')
+       
+function bookRoom() {
+   let button = document.querySelector("#book")
+   button.addEventListener("click", () => {
+      let currentListing = document.querySelector("#room-no")
+      let number = parseInt(currentListing.textContent)
+      console.log(currentListing.textContent)
    
    
-   function bookRoom() {
-      let button = document.querySelector("#book")
-      button.addEventListener("click", () => {
-         let currentListing = document.querySelector("#room-no")
-         let number = parseInt(currentListing.textContent)
-         console.log(currentListing.textContent)
-      
-      
-      if(number >=1){
-       currentListing.textContent = currentListing.textContent -1}
-        {document.querySelector("#book").textContent = "No More Reservations"
-         alert("Booked")}
+   if(number >=1){
+    currentListing.textContent = currentListing.textContent -1
+    alert("Booked")}else
+     {document.querySelector("#book").textContent = "No More Reservations"
       }
-      )
-  
    }
-   
+   )
+
+}
+
 bookRoom();
-   
+  
+
    function cancelRoom() {
       let button = document.querySelector("#cancel")
       button.addEventListener("click", () => {
          let currentListing = document.querySelector("#room-no")
          let number = parseInt(currentListing.textContent)
-         console.log(currentListing.textContent)
+        
       
       
       if(number >=1){
-       currentListing.textContent = currentListing.textContent +1}
-        {document.querySelector("#cancel").textContent = "No More Reservations"
-         alert("Booking Canceled")}
+       currentListing.textContent = parseInt(currentListing.textContent) +1
+       alert("Booking Canceled")
+      }
+       
+         
       }
       )
       }
@@ -67,11 +69,14 @@ bookRoom();
          button.addEventListener("click", () => {
             let currentListing = document.querySelector("#room-no")
             let number = parseInt(currentListing.textContent)
-            console.log(currentListing.textContent)
+           
          
          
          if(number >=1){
-          currentListing.textContent = currentListing.textContent +1}
+          currentListing.textContent = parseInt(currentListing.textContent) +1
+          alert("Check out")
+         }
+          
           }
          
          )
@@ -79,7 +84,7 @@ bookRoom();
          
         checkoutRoom();
    
-         roomsRemaining()
+         roomsRemaining();
 
    })
    
