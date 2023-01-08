@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
       document.getElementById('room-no').textContent = data.rooms[0].roomAmount})
 
-
+//display remaining rooms function
    
      function roomsRemaining(rooms) {
               
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
 }
    
-       
+       //book room function
 function bookRoom() {
    let button = document.querySelector("#book")
    button.addEventListener("click", () => {
@@ -43,7 +43,7 @@ function bookRoom() {
 
 bookRoom();
   
-
+//cancel room function
    function cancelRoom() {
       let button = document.querySelector("#cancel")
       button.addEventListener("click", () => {
@@ -63,7 +63,7 @@ bookRoom();
       }
       
       cancelRoom();
-   
+   //checkout room function
       function checkoutRoom() {
          let button = document.querySelector("#Check-out")
          button.addEventListener("click", () => {
